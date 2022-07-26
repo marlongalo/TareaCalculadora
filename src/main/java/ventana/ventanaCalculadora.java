@@ -9,7 +9,12 @@ package ventana;
  * @author Marlon Galo
  */
 public class ventanaCalculadora extends javax.swing.JFrame {
-
+private String cadenaNumeros="";
+private double numero1;
+private String operacion = "null";
+double resultado=0;
+private boolean activado = true;
+private boolean punto = true;
     /**
      * Creates new form ventana
      */
@@ -164,6 +169,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         buton8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         buton8.setText("8");
+        buton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buton8ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -174,6 +184,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton9.setText("9");
+        boton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton9ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
@@ -192,6 +207,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton4.setText("4");
+        boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton4ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -202,6 +222,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton5.setText("5");
+        boton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -212,6 +237,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton6.setText("6");
+        boton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton6ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
@@ -232,6 +262,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton1.setText("1");
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -242,6 +277,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton2.setText("2");
+        boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
@@ -252,6 +292,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton3.setText("3");
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
@@ -262,6 +307,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         botonMas.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         botonMas.setText("+");
+        botonMas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
@@ -287,6 +337,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         boton0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         boton0.setText("0");
+        boton0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton0ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -297,6 +352,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         botonPunto.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         botonPunto.setText(".");
+        botonPunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPuntoActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
@@ -307,6 +367,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         botonIgual.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         botonIgual.setText("=");
+        botonIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonIgualActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
@@ -392,16 +457,131 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonDividirActionPerformed
 
     private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
-        // TODO add your handling code here:
+        int tamano =cadenaNumeros.length();
+        if(tamano>0){
+            {
+            cadenaNumeros=cadenaNumeros.substring(0, cadenaNumeros.length()-1);
+            etiquetaNumeros.setText(cadenaNumeros);
+            }
+        }
     }//GEN-LAST:event_botonBorrarActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-        // TODO add your handling code here:
+        cadenaNumeros+="7";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void botonMasMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMasMenosActionPerformed
-        // TODO add your handling code here:
+        if(cadenaNumeros.charAt(0) != '-'){
+            cadenaNumeros="-"+cadenaNumeros;
+        }
+        else{
+             cadenaNumeros=cadenaNumeros.substring(1, cadenaNumeros.length());
+        }
+        etiquetaNumeros.setText(cadenaNumeros);
     }//GEN-LAST:event_botonMasMenosActionPerformed
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        cadenaNumeros+="1";
+        etiquetaNumeros.setText(cadenaNumeros);        
+        activado=true;
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+        cadenaNumeros+="2";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_boton2ActionPerformed
+
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+        cadenaNumeros+="3";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_boton3ActionPerformed
+
+    private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
+        cadenaNumeros+="4";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_boton4ActionPerformed
+
+    private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
+        cadenaNumeros+="5";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_boton5ActionPerformed
+
+    private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
+        cadenaNumeros+="6";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_boton6ActionPerformed
+
+    private void buton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buton8ActionPerformed
+        cadenaNumeros+="8";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_buton8ActionPerformed
+
+    private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
+        cadenaNumeros+="9";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+    }//GEN-LAST:event_boton9ActionPerformed
+
+    private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
+        if(cadenaNumeros != "")
+        {
+        cadenaNumeros+="0";
+        etiquetaNumeros.setText(cadenaNumeros); 
+        activado=true;
+        }
+    }//GEN-LAST:event_boton0ActionPerformed
+
+    private void botonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMasActionPerformed
+        if(activado==true){
+        numero1 = Double.parseDouble(cadenaNumeros);        // TODO add your handling code here:
+        etiquetaMuestra.setText(cadenaNumeros+" + ");
+        cadenaNumeros = "";
+        operacion = "sumar";
+        activado = false;
+        punto=true;
+        }
+    }//GEN-LAST:event_botonMasActionPerformed
+
+    private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
+        double numero2;
+        if(operacion.equals("null"))
+        {
+            etiquetaNumeros.setText(cadenaNumeros);
+        }
+        else if(operacion.equals("sumar")){
+            numero2=Double.parseDouble(cadenaNumeros);
+            resultado = numero1+numero2;
+            etiquetaNumeros.setText(String.format("%.2f",resultado));
+            cadenaNumeros=String.valueOf(resultado);
+            operacion="null";
+        }
+        
+        etiquetaMuestra.setText("");
+        activado=true;
+        
+    }//GEN-LAST:event_botonIgualActionPerformed
+
+    private void botonPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntoActionPerformed
+        if(punto==true){
+            if(cadenaNumeros==""){
+            cadenaNumeros+="0.";
+             }
+            else{
+            cadenaNumeros+=".";
+            }
+        
+        etiquetaNumeros.setText(cadenaNumeros);
+        punto=false;
+        }
+    }//GEN-LAST:event_botonPuntoActionPerformed
 
     /**
      * @param args the command line arguments
