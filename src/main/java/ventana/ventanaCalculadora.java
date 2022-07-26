@@ -48,6 +48,10 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         boton2 = new javax.swing.JButton();
         boton3 = new javax.swing.JButton();
         botonMas = new javax.swing.JButton();
+        botonMasMenos = new javax.swing.JButton();
+        boton0 = new javax.swing.JButton();
+        botonPunto = new javax.swing.JButton();
+        botonIgual = new javax.swing.JButton();
         barraMenu = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
         CalculadoraEstandar = new javax.swing.JMenuItem();
@@ -266,6 +270,51 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         gridBagConstraints.weighty = 0.5;
         panel.add(botonMas, gridBagConstraints);
 
+        botonMasMenos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonMasMenos.setText("±");
+        botonMasMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMasMenosActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonMasMenos, gridBagConstraints);
+
+        boton0.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton0.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton0, gridBagConstraints);
+
+        botonPunto.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonPunto.setText(".");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonPunto, gridBagConstraints);
+
+        botonIgual.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonIgual.setText("=");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonIgual, gridBagConstraints);
+
         menu.setText("Calculadoras");
         menu.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
@@ -350,6 +399,10 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_boton7ActionPerformed
 
+    private void botonMasMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMasMenosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonMasMenosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -391,6 +444,7 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JMenuItem CalculadoraEstandar;
     private javax.swing.JMenuItem Salir;
     private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JButton boton0;
     private javax.swing.JButton boton1;
     private javax.swing.JButton boton2;
     private javax.swing.JButton boton3;
@@ -402,9 +456,12 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonBorrar;
     private javax.swing.JButton botonC;
     private javax.swing.JButton botonDividir;
+    private javax.swing.JButton botonIgual;
     private javax.swing.JButton botonMas;
+    private javax.swing.JButton botonMasMenos;
     private javax.swing.JButton botonMenos;
     private javax.swing.JButton botonMultiplicar;
+    private javax.swing.JButton botonPunto;
     private javax.swing.JButton botonRaizCuadrada;
     private javax.swing.JButton buton8;
     private javax.swing.JLabel etiquetaMuestra;
