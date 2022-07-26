@@ -27,7 +27,27 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        panel = new javax.swing.JPanel();
+        etiquetaMuestra = new javax.swing.JLabel();
+        etiquetaNumeros = new javax.swing.JLabel();
+        botonC = new javax.swing.JButton();
+        botonRaizCuadrada = new javax.swing.JButton();
+        botonDividir = new javax.swing.JButton();
+        botonBorrar = new javax.swing.JButton();
+        boton7 = new javax.swing.JButton();
+        buton8 = new javax.swing.JButton();
+        boton9 = new javax.swing.JButton();
+        botonMultiplicar = new javax.swing.JButton();
+        boton4 = new javax.swing.JButton();
+        boton5 = new javax.swing.JButton();
+        boton6 = new javax.swing.JButton();
+        botonMenos = new javax.swing.JButton();
+        boton1 = new javax.swing.JButton();
+        boton2 = new javax.swing.JButton();
+        boton3 = new javax.swing.JButton();
+        botonMas = new javax.swing.JButton();
         barraMenu = new javax.swing.JMenuBar();
         menu = new javax.swing.JMenu();
         CalculadoraEstandar = new javax.swing.JMenuItem();
@@ -36,7 +56,217 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        menu.setText("Usos");
+        panel.setLayout(new java.awt.GridBagLayout());
+
+        etiquetaMuestra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        etiquetaMuestra.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
+        panel.add(etiquetaMuestra, gridBagConstraints);
+
+        etiquetaNumeros.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        etiquetaNumeros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        etiquetaNumeros.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
+        panel.add(etiquetaNumeros, gridBagConstraints);
+
+        botonC.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        botonC.setText("C");
+        botonC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonC, gridBagConstraints);
+
+        botonRaizCuadrada.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonRaizCuadrada.setText("√");
+        botonRaizCuadrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRaizCuadradaActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonRaizCuadrada, gridBagConstraints);
+
+        botonDividir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonDividir.setText("÷");
+        botonDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonDividirActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonDividir, gridBagConstraints);
+
+        botonBorrar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonBorrar.setText("←");
+        botonBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBorrarActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonBorrar, gridBagConstraints);
+
+        boton7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton7.setText("7");
+        boton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton7ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton7, gridBagConstraints);
+
+        buton8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        buton8.setText("8");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(buton8, gridBagConstraints);
+
+        boton9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton9.setText("9");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton9, gridBagConstraints);
+
+        botonMultiplicar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonMultiplicar.setText("X");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        panel.add(botonMultiplicar, gridBagConstraints);
+
+        boton4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton4.setText("4");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton4, gridBagConstraints);
+
+        boton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton5.setText("5");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton5, gridBagConstraints);
+
+        boton6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton6.setText("6");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton6, gridBagConstraints);
+
+        botonMenos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonMenos.setText("-");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonMenos, gridBagConstraints);
+
+        boton1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton1.setText("1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton1, gridBagConstraints);
+
+        boton2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton2.setText("2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton2, gridBagConstraints);
+
+        boton3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        boton3.setText("3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(boton3, gridBagConstraints);
+
+        botonMas.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        botonMas.setText("+");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weighty = 0.5;
+        panel.add(botonMas, gridBagConstraints);
+
+        menu.setText("Calculadoras");
         menu.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         CalculadoraEstandar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -50,6 +280,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
 
         CalculadoraCientifica.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         CalculadoraCientifica.setText("Calculadora Cientifica");
+        CalculadoraCientifica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalculadoraCientificaActionPerformed(evt);
+            }
+        });
         menu.add(CalculadoraCientifica);
 
         Salir.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -69,11 +304,11 @@ public class ventanaCalculadora extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -84,8 +319,36 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_SalirActionPerformed
 
     private void CalculadoraEstandarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculadoraEstandarActionPerformed
-        // TODO add your handling code here:
+        ventanaCalculadora calculadora1 = new ventanaCalculadora();
+        calculadora1.setVisible(true);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_CalculadoraEstandarActionPerformed
+
+    private void CalculadoraCientificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculadoraCientificaActionPerformed
+        ventanaCientifica calculadora2 = new ventanaCientifica();
+        calculadora2.setVisible(true);
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_CalculadoraCientificaActionPerformed
+
+    private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCActionPerformed
+
+    private void botonRaizCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizCuadradaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonRaizCuadradaActionPerformed
+
+    private void botonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDividirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonDividirActionPerformed
+
+    private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBorrarActionPerformed
+
+    private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,6 +391,25 @@ public class ventanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JMenuItem CalculadoraEstandar;
     private javax.swing.JMenuItem Salir;
     private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JButton boton1;
+    private javax.swing.JButton boton2;
+    private javax.swing.JButton boton3;
+    private javax.swing.JButton boton4;
+    private javax.swing.JButton boton5;
+    private javax.swing.JButton boton6;
+    private javax.swing.JButton boton7;
+    private javax.swing.JButton boton9;
+    private javax.swing.JButton botonBorrar;
+    private javax.swing.JButton botonC;
+    private javax.swing.JButton botonDividir;
+    private javax.swing.JButton botonMas;
+    private javax.swing.JButton botonMenos;
+    private javax.swing.JButton botonMultiplicar;
+    private javax.swing.JButton botonRaizCuadrada;
+    private javax.swing.JButton buton8;
+    private javax.swing.JLabel etiquetaMuestra;
+    private javax.swing.JLabel etiquetaNumeros;
     private javax.swing.JMenu menu;
+    private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 }
