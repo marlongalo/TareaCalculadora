@@ -11,6 +11,11 @@ package ventana;
 public class ventanaCientifica extends javax.swing.JFrame {
     private String numero="";
     private boolean punto = true;
+    private String operacion = "null";
+    double resultadoSeno=0;
+    double resultadoCoseno=0;
+    double resultadoTangente=0;
+    private boolean activado = true;
     /**
      * Creates new form ventanaCientifica
      */
@@ -161,6 +166,11 @@ public class ventanaCientifica extends javax.swing.JFrame {
         panel.add(botonPunto, gridBagConstraints);
 
         botonRetroceso.setText("←");
+        botonRetroceso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRetrocesoActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
@@ -171,6 +181,11 @@ public class ventanaCientifica extends javax.swing.JFrame {
 
         botonIgual.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         botonIgual.setText("=");
+        botonIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonIgualActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -465,7 +480,16 @@ public class ventanaCientifica extends javax.swing.JFrame {
     }//GEN-LAST:event_CalculadoraEstandarActionPerformed
 
     private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
-        // TODO add your handling code here:
+        etiquetaGradoSeno.setText("");
+        etiquetaGradoCoseno.setText("");
+        etiquetaGradoTangente.setText("");
+        etiquetaResultadoSeno.setText("");
+        etiquetaResultadoCoseno.setText("");
+        etiquetaResultadoTangente.setText("");
+        numero="";
+        operacion="nula";
+        activado=true;
+        punto=true; 
     }//GEN-LAST:event_botonBorrarActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
@@ -556,6 +580,36 @@ public class ventanaCientifica extends javax.swing.JFrame {
         punto=false;
         }
     }//GEN-LAST:event_botonPuntoActionPerformed
+
+    private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
+            double sin=Double.parseDouble(numero);
+            double cos=Double.parseDouble(numero);
+            double tan=Double.parseDouble(numero);
+            resultadoSeno= Math.sin(sin);
+            resultadoCoseno=Math.cos(cos);
+            resultadoTangente=Math.tan(tan);
+            etiquetaResultadoSeno.setText(String.format("%.2f",resultadoSeno));
+            etiquetaResultadoCoseno.setText(String.format("%.2f",resultadoCoseno));
+            etiquetaResultadoTangente.setText(String.format("%.2f",resultadoTangente));
+                                           
+    }//GEN-LAST:event_botonIgualActionPerformed
+
+    private void botonRetrocesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRetrocesoActionPerformed
+        int tamano =numero.length();
+        if(tamano>0){
+            if(tamano==1)
+            {
+                numero="0";
+            }
+        else
+            {
+            numero=numero.substring(0, numero.length()-1);
+            }
+        etiquetaGradoSeno.setText(numero);
+        etiquetaGradoCoseno.setText(numero);
+        etiquetaGradoTangente.setText(numero);
+        }
+    }//GEN-LAST:event_botonRetrocesoActionPerformed
 
     /**
      * @param args the command line arguments
