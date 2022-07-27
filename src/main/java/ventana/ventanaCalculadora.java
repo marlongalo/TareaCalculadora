@@ -199,6 +199,11 @@ private boolean punto = true;
 
         botonMultiplicar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         botonMultiplicar.setText("X");
+        botonMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMultiplicarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -252,6 +257,11 @@ private boolean punto = true;
 
         botonMenos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         botonMenos.setText("-");
+        botonMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMenosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
@@ -445,29 +455,62 @@ private boolean punto = true;
     }//GEN-LAST:event_CalculadoraCientificaActionPerformed
 
     private void botonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCActionPerformed
-        // TODO add your handling code here:
+        etiquetaMuestra.setText("");
+        etiquetaNumeros.setText("");
+        cadenaNumeros="";
+        operacion="nula";
+        activado=true;
+        punto=true;       
+        
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonRaizCuadradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRaizCuadradaActionPerformed
-        // TODO add your handling code here:
+       
+        numero1 = Double.parseDouble(cadenaNumeros);        // TODO add your handling code here:
+        etiquetaMuestra.setText("sqrt("+cadenaNumeros+")");
+        cadenaNumeros = "";
+        resultado = Math.sqrt(numero1);
+        etiquetaNumeros.setText(String.format("%.2f",resultado));
+        cadenaNumeros=String.valueOf(resultado);
+        punto=true;
+        
     }//GEN-LAST:event_botonRaizCuadradaActionPerformed
 
     private void botonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDividirActionPerformed
-        // TODO add your handling code here:
+        if(activado==true){
+        numero1 = Double.parseDouble(cadenaNumeros);        // TODO add your handling code here:
+        etiquetaMuestra.setText(cadenaNumeros+" / ");
+        cadenaNumeros = "";
+        operacion = "dividir";
+        activado = false;
+        punto=true;
+        }
     }//GEN-LAST:event_botonDividirActionPerformed
 
     private void botonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBorrarActionPerformed
         int tamano =cadenaNumeros.length();
         if(tamano>0){
+            if(tamano==1)
+            {
+                cadenaNumeros="0";
+            }
+        else
             {
             cadenaNumeros=cadenaNumeros.substring(0, cadenaNumeros.length()-1);
-            etiquetaNumeros.setText(cadenaNumeros);
             }
+        etiquetaNumeros.setText(cadenaNumeros);
         }
     }//GEN-LAST:event_botonBorrarActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-        cadenaNumeros+="7";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="7";
+        }
+        else
+        {
+            cadenaNumeros+="7";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton7ActionPerformed
@@ -483,49 +526,105 @@ private boolean punto = true;
     }//GEN-LAST:event_botonMasMenosActionPerformed
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-        cadenaNumeros+="1";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="1";
+        }
+        else
+        {
+            cadenaNumeros+="1";
+        }
         etiquetaNumeros.setText(cadenaNumeros);        
         activado=true;
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-        cadenaNumeros+="2";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="2";
+        }
+        else
+        {
+            cadenaNumeros+="2";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-        cadenaNumeros+="3";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="3";
+        }
+        else
+        {
+            cadenaNumeros+="3";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-        cadenaNumeros+="4";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="4";
+        }
+        else
+        {
+            cadenaNumeros+="4";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-        cadenaNumeros+="5";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="5";
+        }
+        else
+        {
+            cadenaNumeros+="5";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-        cadenaNumeros+="6";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="6";
+        }
+        else
+        {
+            cadenaNumeros+="6";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void buton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buton8ActionPerformed
-        cadenaNumeros+="8";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="8";
+        }
+        else
+        {
+            cadenaNumeros+="8";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_buton8ActionPerformed
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-        cadenaNumeros+="9";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="9";
+        }
+        else
+        {
+            cadenaNumeros+="9";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
     }//GEN-LAST:event_boton9ActionPerformed
@@ -533,7 +632,14 @@ private boolean punto = true;
     private void boton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton0ActionPerformed
         if(cadenaNumeros != "")
         {
-        cadenaNumeros+="0";
+        if(etiquetaNumeros.getText()=="0")
+        {
+            cadenaNumeros="0";
+        }
+        else
+        {
+            cadenaNumeros+="0";
+        }
         etiquetaNumeros.setText(cadenaNumeros); 
         activado=true;
         }
@@ -563,6 +669,27 @@ private boolean punto = true;
             cadenaNumeros=String.valueOf(resultado);
             operacion="null";
         }
+        else if(operacion.equals("restar")){
+            numero2=Double.parseDouble(cadenaNumeros);
+            resultado = numero1-numero2;
+            etiquetaNumeros.setText(String.format("%.2f",resultado));
+            cadenaNumeros=String.valueOf(resultado);
+            operacion="null";
+        }
+        else if(operacion.equals("multiplicar")){
+            numero2=Double.parseDouble(cadenaNumeros);
+            resultado = numero1*numero2;
+            etiquetaNumeros.setText(String.format("%.2f",resultado));
+            cadenaNumeros=String.valueOf(resultado);
+            operacion="null";
+        }
+        else if(operacion.equals("dividir")){
+            numero2=Double.parseDouble(cadenaNumeros);
+            resultado = numero1/numero2;
+            etiquetaNumeros.setText(String.format("%.2f",resultado));
+            cadenaNumeros=String.valueOf(resultado);
+            operacion="null";
+        }
         
         etiquetaMuestra.setText("");
         activado=true;
@@ -582,6 +709,28 @@ private boolean punto = true;
         punto=false;
         }
     }//GEN-LAST:event_botonPuntoActionPerformed
+
+    private void botonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenosActionPerformed
+        if(activado==true){
+        numero1 = Double.parseDouble(cadenaNumeros);        // TODO add your handling code here:
+        etiquetaMuestra.setText(cadenaNumeros+" - ");
+        cadenaNumeros = "";
+        operacion = "restar";
+        activado = false;
+        punto=true;
+        }
+    }//GEN-LAST:event_botonMenosActionPerformed
+
+    private void botonMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMultiplicarActionPerformed
+        if(activado==true){
+        numero1 = Double.parseDouble(cadenaNumeros);        // TODO add your handling code here:
+        etiquetaMuestra.setText(cadenaNumeros+" * ");
+        cadenaNumeros = "";
+        operacion = "multiplicar";
+        activado = false;
+        punto=true;
+        }
+    }//GEN-LAST:event_botonMultiplicarActionPerformed
 
     /**
      * @param args the command line arguments
